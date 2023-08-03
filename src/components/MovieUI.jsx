@@ -1,0 +1,53 @@
+import { TbRating18Plus } from "react-icons/tb";
+import { GrLanguage } from "react-icons/gr";
+import { BsCameraReelsFill } from "react-icons/bs";
+import { FcAbout } from "react-icons/fc";
+import { BiSolidMoviePlay } from "react-icons/bi";
+
+const MovieUI = ({
+  name,
+  poster,
+  year,
+  language,
+  director,
+  genre,
+  rated,
+  description,
+
+}) => {
+  return (
+    <div className=" border shadow-3xl text-fuchsia-100 bg-gray-700 rounded-md">
+      <h1 className="font-serif text-3xl text-center py-2 "> {name}</h1>
+      <div className=" flex justify-center">
+        <img
+          className="md:h-30 border rounded-md md:w-[25vw] h-full w-full m-3"
+          src={poster}
+          alt="Poster"
+        />
+      </div>
+      <div className="p-3 font-semibold">
+        <p>Year : {year}</p>
+        <p className="flex items-center gap-2">
+          {" "}
+          Language
+          <GrLanguage /> : {language}
+        </p>
+        <p className="flex  items-center gap-2">
+          {" "}
+          Director <BsCameraReelsFill /> : {director}
+        </p>
+        <p className="flex  items-center gap-2">
+          Genre <BiSolidMoviePlay /> : {genre}
+        </p>
+        <p className="flex  items-center gap-2">
+          Rating <TbRating18Plus /> : {rated}
+        </p>
+        <p className="flex gap-2">
+          About <FcAbout />: {description.slice(0, 60)}....
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default MovieUI;
