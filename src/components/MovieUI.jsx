@@ -13,10 +13,9 @@ const MovieUI = ({
   genre,
   rated,
   description,
-
 }) => {
   return (
-    <div className=" border shadow-3xl text-fuchsia-100 bg-gray-700 rounded-md">
+    <div className=" border-2 text-fuchsia-100 bg-gray-900 hover:bg-gray-700 cursor-pointer hover:shadow-3xl  rounded-md mx-2">
       <h1 className="font-serif text-3xl text-center py-2 "> {name}</h1>
       <div className=" flex justify-center">
         <img
